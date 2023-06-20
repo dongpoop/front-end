@@ -1,22 +1,44 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: '/focusNum',
+    name: 'focusNum',
+    component: () => import('@/views/focus-num.vue')
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/hasHousesRegion',
+    name: 'hasHousesRegion',
+    component: () => import('@/views/has-houses-region.vue')
+  },
+  {
+    path: '/numOfCommunity',
+    name: 'numOfCommunity',
+    component: () => import('@/views/num-of-community.vue')
+  },
+  {
+    path: '/numOfCommunityMore200',
+    name: 'numOfCommunityMore200',
+    component: () => import('@/views/num-of-community-more-200.vue')
+  },
+  {
+    path: '/soldNumByYear',
+    name: 'soldNumByYear',
+    component: () => import('@/views/sold-num-by-year.vue')
+  },
+  {
+    path: '/soldNumCommunity',
+    name: 'soldNumCommunity',
+    component: () => import('@/views/sold-num-community.vue')
+  },
+  {
+    path: '/hasHouses',
+    name: 'hasHouses',
+    component: () => import('@/views/has-houses.vue')
   }
 ]
 
